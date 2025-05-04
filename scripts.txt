@@ -1,0 +1,103 @@
+-- interview.EVDATA definition
+
+CREATE TABLE `EVDATA` (
+  `VIN` varchar(100) NOT NULL,
+  `county_id` bigint DEFAULT NULL,
+  `city_id` bigint DEFAULT NULL,
+  `state_id` bigint DEFAULT NULL,
+  `postal_code` varchar(100) NOT NULL,
+  `model_year_id` bigint NOT NULL,
+  `make_id` bigint NOT NULL,
+  `model_id` bigint NOT NULL,
+  `ev_type_id` bigint NOT NULL,
+  `cafv_eligibility_id` bigint NOT NULL,
+  `electric_range` bigint DEFAULT NULL,
+  `base_msrp` bigint DEFAULT NULL,
+  `legislative_district` bigint DEFAULT NULL,
+  `dol_vehicle_id` bigint NOT NULL,
+  `vehicle_location` varchar(100) NOT NULL,
+  `electric_utility` bigint DEFAULT NULL,
+  `census_tract_2020` bigint DEFAULT NULL,
+  PRIMARY KEY (`VIN`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- interview.MSTCAFVELIGIBILITY definition
+
+CREATE TABLE `MSTCAFVELIGIBILITY` (
+  `ID` bigint NOT NULL,
+  `CAFV_ELIGIBILITY` varchar(100) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- interview.MSTCITY definition
+
+CREATE TABLE `MSTCITY` (
+  `ID` bigint NOT NULL,
+  `CITY` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- interview.MSTCOUNTY definition
+
+CREATE TABLE `MSTCOUNTY` (
+  `ID` bigint NOT NULL,
+  `COUNTY` varchar(100) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- interview.MSTELECTRICUTILITY definition
+
+CREATE TABLE `MSTELECTRICUTILITY` (
+  `ID` bigint NOT NULL,
+  `ELECTRIC_UTILITY` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- interview.MSTEVTYPE definition
+
+CREATE TABLE `MSTEVTYPE` (
+  `id` bigint NOT NULL,
+  `EV_TYPE` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- interview.MSTMAKE definition
+
+CREATE TABLE `MSTMAKE` (
+  `ID` bigint NOT NULL,
+  `make` varchar(100) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- interview.MSTMODEL definition
+
+CREATE TABLE `MSTMODEL` (
+  `id` bigint NOT NULL,
+  `model` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- interview.MSTMODELYEAR definition
+
+CREATE TABLE `MSTMODELYEAR` (
+  `ID` bigint NOT NULL,
+  `YEAR` varchar(100) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- interview.MSTSTATE definition
+
+CREATE TABLE `MSTSTATE` (
+  `ID` bigint NOT NULL,
+  `STATE` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
