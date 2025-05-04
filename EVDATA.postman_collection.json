@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "66101c65-a53e-477b-8b06-90570a836edd",
+		"name": "EVDATA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5879154"
+	},
+	"item": [
+		{
+			"name": "GET Valid VIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Invalid VIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata/000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata",
+						"000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET No VIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Valid VIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vin\": \"123\",\n    \"postalCode\": \"98682\",\n    \"county\": null,\n    \"city\": null,\n    \"state\": null,\n    \"modelYear\": null,\n    \"model\": null,\n    \"make\": null,\n    \"electricVehicleType\": null,\n    \"cafvEligilibility\": null,\n    \"electricRange\": 21,\n    \"baseMsrp\": 0,\n    \"legislativeDistrict\": 17,\n    \"dolVehicleId\": 233452404,\n    \"vehicleLocation\": \"POINT (-122.55149 45.69345)\",\n    \"electricUtility\": null,\n    \"censusTract2020\": \"53011041312\",\n    \"countyId\": 17,\n    \"cityId\": 68,\n    \"stateId\": 1,\n    \"modelYearId\": 1,\n    \"modelId\": 1,\n    \"makeId\": 1,\n    \"electricVehicleTypeId\": 1,\n    \"cafvEligibilityId\": 1,\n    \"electricUtilityId\": 11\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete No VIN",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Invalid VIN",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata/000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata",
+						"000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Valid VIN",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Valid VIN",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vin\": \"123\",\n    \"postalCode\": \"98682\",\n    \"county\": null,\n    \"city\": null,\n    \"state\": null,\n    \"modelYear\": null,\n    \"model\": null,\n    \"make\": null,\n    \"electricVehicleType\": null,\n    \"cafvEligilibility\": null,\n    \"electricRange\": 21,\n    \"baseMsrp\": 0,\n    \"legislativeDistrict\": 17,\n    \"dolVehicleId\": 233452404,\n    \"vehicleLocation\": \"POINT (-122.55149 45.69345)\",\n    \"electricUtility\": null,\n    \"censusTract2020\": \"53011041312\",\n    \"countyId\": 17,\n    \"cityId\": 68,\n    \"stateId\": 1,\n    \"modelYearId\": 1,\n    \"modelId\": 1,\n    \"makeId\": 1,\n    \"electricVehicleTypeId\": 1,\n    \"cafvEligibilityId\": 1,\n    \"electricUtilityId\": 11\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT InValid VIN",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vin\": \"000\",\n    \"postalCode\": \"98681\",\n    \"county\": null,\n    \"city\": null,\n    \"state\": null,\n    \"modelYear\": null,\n    \"model\": null,\n    \"make\": null,\n    \"electricVehicleType\": null,\n    \"cafvEligilibility\": null,\n    \"electricRange\": 21,\n    \"baseMsrp\": 0,\n    \"legislativeDistrict\": 17,\n    \"dolVehicleId\": 233452404,\n    \"vehicleLocation\": \"POINT (-122.55149 45.69345)\",\n    \"electricUtility\": null,\n    \"censusTract2020\": \"53011041312\",\n    \"countyId\": 17,\n    \"cityId\": 68,\n    \"stateId\": 1,\n    \"modelYearId\": 1,\n    \"modelId\": 1,\n    \"makeId\": 1,\n    \"electricVehicleTypeId\": 1,\n    \"cafvEligibilityId\": 1,\n    \"electricUtilityId\": 11\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Update MSRP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"model\": \"TESLA\",\n    \"make\": \"MODEL Y\",\n    \"baseMsrp\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/evdata/actions/updatemsrp",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"evdata",
+						"actions",
+						"updatemsrp"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
